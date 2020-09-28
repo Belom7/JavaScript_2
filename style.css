@@ -76,7 +76,7 @@ h3, p {
     margin-bottom: 10px;
 }
 
-.buy-btn {
+.remove, .add {
     padding: 5px 15px;
     background-color: rgba(218, 233, 240, 0.623);
 }
