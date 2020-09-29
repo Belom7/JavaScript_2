@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>lesson_4</title>
+    <title>lesson_5</title>
 </head>
-
 <body>
-    <header>
-        <div class="task"></div>
-    </header>
-    <main>
-        <div class="modified_text"></div>
-        <div class="form">
-            <form action="">
-                <label class="label_1" for="name">Имя:</label>
-                <input class="input_1" type="text" value="" name="name" placeholder="Введите свое имя"><br>
-                <label class="label_2" for="telephone">Телефон:</label>
-                <input class="input_2" type="text" value="" name="telephone" placeholder="+7(000)-000-0000"><br>
-                <label class="label_3" for="email">Email:</label>
-                <input class="input_3" type="email" value="" name="Email" placeholder="test@mail.ru"><br>
-                <label class="label_4" for="text">Кратко расскажите о себе:</label><br>
-                <textarea name="text" id="1" cols="30" rows="5"
-                    placeholder="Жил был да не тужил, начал учить JS и приуныл :\"></textarea><br>
-                <button class="button" id="12" type="submit">Отправить</button>
-            </form>
-        </div>
-    </main>
-    <footer>
+    <div class="oop">
+        <h2>{{ name }}</h2>
+        <h2>{{ text }}</h2>
+        <h3 v-if='!cek'>{{ sayHello()}}</h3>
+        <button @click='cek=!cek'>Жмякай</button>
+        <a :href="link">Yandex</a>
+        <button v-on:click='counter++'>добавить</button>
+        <button @click='counter--'>Убрать</button>
+        <button @click='increace(3)'>добавить 3</button>
+        <p>{{counter}}</p>
+        <p>{{ counter>10 ? 'Больше 10' : 'Меньше 10'}}</p>
 
-    </footer>
+        <h2 v-if='show'>Меня видно</h2>
+        <h2 v-else='show'>Меня не видно</h2>
+        <button @click='show=!show'>чпоньк</button>
+
+        <p @mousemove='coordinates()'>etot tekst vidno v coordinatah {{ x }} / {{ y }}
+            <span @mousemove.stop> no move mosuse</span>
+        </p>
+
+        <input type="text" v-model='name'>
+        <input type="text" v-model.lazy='text'>
+
+        <div v-html='sis'></div>
+        <div class="products">
+            <div v-for='product of products' :key='product.title'>
+                <img :src="product.img" alt="">
+                <p>{{ product.title }}</p>
+                <p>{{ product.price}}</p>
+                <p>{{ product.quantity }}</p>
+                <button @click='dob()'>добавить</button>
+            </div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
     <script src="main.js"></script>
 </body>
-
 </html>
