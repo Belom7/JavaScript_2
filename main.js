@@ -11,7 +11,6 @@ const app = new Vue({
         products: [],
         imgCatalog: 'https://placehold.it/200x150',
         search: '',
-        sortKey: 'product_name',
         showModal: false,
     },
     methods: {
@@ -41,15 +40,9 @@ const app = new Vue({
             })
     },
     computed: {
-        sortedUsers() {
-            const k = this.sortKey;
-            return this.products.sort((a, b) => {
-                return (a[k] < b[k] ? -1 : a[k] > b[k] ? 1 : 0) * [1, -1][+this.reverse];
-            });
-        },
-        filteredUsers() {
+        filtered() {
             const s = this.search.toLowerCase();
-            return this.sortedUsers.filter(n => {
+            return this.products.filter(n => {
                 return Object.values(n).some(m => m.toString().toLowerCase().includes(s));
             });
         },
