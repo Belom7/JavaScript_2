@@ -1,0 +1,100 @@
+[
+    {
+        "product_article": "s-11",
+        "product_name": "Атласная женская ночная сорочка",
+        "product_price": 7450,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-12",
+        "product_name": "Короткая домашняя рубашка в клетку",
+        "product_price": 4650,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-13",
+        "product_name": "Легкая ночная рубашка без рукавов",
+        "product_price": 5470,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-14",
+        "product_name": "Легкая ночная сорочка в горошек",
+        "product_price": 4820,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-15",
+        "product_name": "Ночная сорочка из натурального шелка с кружевом",
+        "product_price": 15600,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-16",
+        "product_name": "Сорочка домашнее платье с змним рисунком",
+        "product_price": 3920,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    },
+    {
+        "product_article": "s-17",
+        "product_name": "Сорочка с зимним рисунком",
+        "product_price": 4200,
+        "product_size": {
+            "xxs": 42,
+            "xs": 44,
+            "s": 46,
+            "m": 48,
+            "l": 50,
+            "xl": 52,
+            "xxl": 54
+        }
+    }
+]
