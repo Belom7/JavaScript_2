@@ -1,10 +1,10 @@
 Vue.component('search', {
   data: {
-    userSearch: '',
+    search: '',
   },
   template: `
-              <form action="#" class="search-form" @submit.prevent="$parent.$refs.products.filter(userSearch)">
-              <input type="text" class="search-field" v-model="userSearch">
+              <form action="#" class="search-form" @submit.prevent="$parent.$refs.products.filter(search)">
+              <input type="text" class="search-field" v-model="search">
               <button class="btn-search" type="submit">
                   <i class="fas fa-search"></i>
               </button>
