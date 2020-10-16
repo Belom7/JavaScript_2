@@ -6,37 +6,6 @@
   <title>Интернет-магазин</title>
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
-  <script type="text/x-template" id="modal-template">
-        <transition name="modal">
-          <div class="modal-mask">
-            <div class="modal-wrapper">
-              <div class="modal-container">
-  
-                <div class="modal-header">
-                  <slot name="header">
-                    <h2>Корзина</h2>
-                  </slot>
-                </div>
-  
-                <div class="modal-body">
-                  <slot name="body">
-                    
-                  </slot>
-                </div>
-  
-                <div class="modal-footer">
-                  <slot name="footer">
-                    Для оформления заказа
-                    <button class="modal-default-button" @click="$emit('close')">
-                      Закрыть
-                    </button>
-                  </slot>
-                </div>
-              </div>
-            </div>
-          </div>
-        </transition>
-      </script>
 </head>
 
 <body>
@@ -44,50 +13,22 @@
     <header>
       <div class="logo">E-shop</div>
       <div class="cart">
-        <form action="#" class="search-form">
-          <input type="text" class="search-field" v-model='search'>
-          <button class="btn-search" type="submit" @click='filteredList(search)'>
-            <i class="fas fa-search"></i>
-          </button>
-        </form>
-        <button class="btn-cart" type="button" @click="showModal = true">Корзина</button>
-        <modal v-if="showModal" @close="showModal = false"></modal>
-        <div class="cart-block invisible"></div>
+        <search></search>
+        <cart ref="cart"></cart>
       </div>
     </header>
     <main>
-      <div class="products">
-        <div class="product-item" v-for="product in filtered" :key="product.id_product">
-          <img :src="imgCatalog" alt="Some img">
-          <div class="desc">
-            <h3>{{product.product_name}}</h3>
-            <p>{{product.price}} $</p>
-            <button class="buy-btn" @click="addProduct(product)">Купить</button>
-          </div>
-        </div>
-      </div>
+      <products ref="products"></products>
     </main>
   </div>
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
     integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="cartComponent.js"></script>
+  <script src="productComponent.js"></script>
+  <script src="searchComponent.js"></script>
   <script src="main.js"></script>
 </body>
 
 </html>
-
-<!--<div class="cart-item" data-id="${this.id_product}">-->
-<!--<div class="product-bio">-->
-<!--<img src="${this.img}" alt="Some image">-->
-<!--<div class="product-desc">-->
-<!--<p class="product-title">${this.product_name}</p>-->
-<!--<p class="product-quantity">Quantity: ${this.quantity}</p>-->
-<!--<p class="product-single-price">$${this.price} each</p>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="right-block">-->
-<!--<p class="product-price">${this.quantity*this.price}</p>-->
-<!--<button class="del-btn" data-id="${this.id_product}">&times;</button>-->
-<!--</div>-->
-<!--</div>-->
